@@ -1,11 +1,8 @@
 const numbers = document.querySelectorAll('.number');
 let inputValue = '';
 
-numbers.forEach(number => {
-  number.addEventListener('click', () => {
-    inputValue += number.getAttribute('data-value');
-    document.getElementById('result').textContent = `Input: ${inputValue}`;
-  });
+document.querySelector('.quality').addEventListener('click', () => {
+  window.location.href = './quality/index.html';
 });
 
 function httpGet(theUrl)

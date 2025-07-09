@@ -36,7 +36,7 @@ h1 {
   margin: 2rem 0;
 }
 
-.number {
+.number, .quality {
   background-color: #555;
   color: white;
   font-size: 2.5rem;

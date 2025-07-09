@@ -134,3 +134,7 @@ button:hover {
   background: none;
   border: none;
 }
+pre {
+  white-space: pre-wrap;       /* Wraps text and preserves whitespace */
+  word-wrap: break-word;       /* Break long words if needed */
+}

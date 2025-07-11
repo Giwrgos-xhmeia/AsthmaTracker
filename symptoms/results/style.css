@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,12 +37,13 @@ h1 {
   margin: 2rem 0;
 }
 
-.number1, .number2, .number3, .number4 {
+.number, .quality, .aiassis, .symptoms {
   background-color: #555;
   color: white;
-  font-size: 2.5rem;
-  height: 95px;
-  display: flex;
+  font-size: 2rem;
+  height: 100px;
+  padding: 0.75rem;
+  margin: 0.75rem;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
@@ -74,19 +76,11 @@ button:hover {
   font-weight: bold;
   color: #333;
 }
-.number1-container, .number2-container, .number3-container, .number4-container {
-  background-color: #555;
-  border-radius: 12px;
-  color: white;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.title {
-  font-size: 25px;
+
+.enhmerosh {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 .info-popup {
   position: fixed;
@@ -111,6 +105,7 @@ button:hover {
   visibility: hidden; /* Make it non-interactive */
   transition: opacity 0.5s ease, visibility 0s 0.5s; /* Delay visibility change after opacity */
 }
+
 
 .info-content {
   position: relative;
@@ -143,4 +138,66 @@ button:hover {
 pre {
   white-space: pre-wrap;       /* Wraps text and preserves whitespace */
   word-wrap: break-word;       /* Break long words if needed */
+}
+/* Container for all the records */
+.records-container {
+  display: flex;
+  flex-direction: column;   /* Stack records vertically */
+  gap: 20px;                /* Space between each record */
+  padding: 2rem 1rem;       /* Padding around the container */
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;           /* Center the container */
+}
+
+/* Individual record styling */
+.record {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;   /* Stack date and details vertically */
+  gap: 10px;                /* Space between date and details */
+}
+
+/* Record date styling */
+.record-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Record details styling */
+.record-details p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;            /* Small margin between details */
+}
+
+/* Add hover effect to records */
+.record:hover {
+  background-color: #eef2f7;   /* Light background on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.graph-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.graph-container h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+svg {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }

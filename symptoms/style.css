@@ -1,16 +1,3 @@
-/* Start by hiding the body of the page */
-body {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s; /* Fade in over 1 second */
-}
-
-/* Once page content is loaded, fade it in */
-body.loaded {
-  opacity: 1;
-  visibility: visible; /* Make it interactive */
-  transition: opacity 0.5s ease-in-out, visibility 0s 0s; /* No delay for visibility */
-}
 
 * {
   box-sizing: border-box;
@@ -55,7 +42,8 @@ h1 {
   color: white;
   font-size: 2rem;
   height: 100px;
-  display: flex;
+  padding: 0.75rem;
+  margin: 0.75rem;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
@@ -150,4 +138,106 @@ button:hover {
 pre {
   white-space: pre-wrap;       /* Wraps text and preserves whitespace */
   word-wrap: break-word;       /* Break long words if needed */
+}
+/* Questionnaire Container: Mobile-friendly design for symptom tracking */
+.questionnaire-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  width: 90%;
+  overflow: hidden;
+}
+
+/* Title inside Questionnaire */
+.questionnaire-container h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Individual Question styling */
+.questionnaire-container .question {
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraph styling inside each question */
+.questionnaire-container .question p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+/* Label styling for checkboxes */
+.questionnaire-container label {
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect on labels */
+.questionnaire-container label:hover {
+  color: #555;
+}
+
+/* Checkbox styling */
+.questionnaire-container input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect on checkboxes */
+.questionnaire-container input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+/* Text Input for "Other Symptoms" */
+.questionnaire-container input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.questionnaire-container input[type="text"]:focus {
+  border-color: #333;
+  outline: none;
+}
+
+/* Button styling */
+.questionnaire-container button {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Full-width for mobile buttons */
+  margin-top: 1rem;
+}
+
+/* Hover effect on button */
+.questionnaire-container button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+/* Button Active (when pressed) */
+.questionnaire-container button:active {
+  transform: translateY(2px);
 }

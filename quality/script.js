@@ -119,6 +119,7 @@ observer.observe(document.body, {
   subtree: true,
   characterData: true
 });
+//infoButton
 const infoBtn = document.getElementById('infoBtn');
 const infoPopup = document.getElementById('infoPopup');
 const closeBtn = document.getElementById('closeBtn');

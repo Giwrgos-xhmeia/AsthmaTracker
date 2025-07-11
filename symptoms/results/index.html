@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air Quality Input</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="location.href='../index.html'" class="homeBtn">⬅️</button>
+    <button id="infoBtn" aria-label="Show info">ℹ️</button>
+  </div>
+<div id="infoPopup" class="info-popup hidden" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+  <div class="info-content">
+    <button id="closeBtn" aria-label="Close info window" class="close-btn">×</button>
+    <h2 id="infoTitle">Πληροφορίες για την Ιστορία Συμπτωμάτων</h2>
+    <pre>
+Η σελίδα αυτή καταγράφει τα συμπτώματα που αντιμετωπίσατε τις τελευταίες ημέρες και την εβδομάδα. Κάθε εγγραφή περιλαμβάνει την ημερομηνία, τα συμπτώματα που βιώσατε, τους πιθανούς παράγοντες που τα προκάλεσαν (π.χ. αλλεργιογόνα ή καιρικές συνθήκες) και σημειώσεις για τις ενέργειες που χρειάστηκε να λάβετε (π.χ. χρήση εισπνευστήρα ή ανάπαυση).
+
+Η παρακολούθηση αυτών των δεδομένων βοηθάει στην κατανόηση της κατάστασής σας και στην αναγνώριση των παραμέτρων που ενδέχεται να επηρεάζουν την αναπνευστική σας υγεία. Ανατρέξτε σε αυτές τις καταγραφές για να παρακολουθήσετε την πορεία της υγείας σας και να προσαρμόσετε την αντιμετώπισή της με βάση τις ανάγκες σας.</pre>
+  </div>
+</div>
+<main class="container">
+  <div class="records-container">
+    <!-- Καταγραφή 1: Σήμερα -->
+    <div class="record">
+      <div class="record-date">Σήμερα</div>
+      <div class="record-details">
+        <p><strong>Συμπτώματα:</strong> Βήχας</p>
+        <p><strong>Παράγοντες ενεργοποίησης:</strong> Σκόνη γύρης</p>
+        <p><strong>Σημειώσεις:</strong> Ήπια συμπτώματα, δεν πιστεύω πως απαιτείται φαρμακευτική αγωγή.</p>
+      </div>
+    </div>
+
+    <!-- Καταγραφή 2: 1 Ημέρα Πριν -->
+    <div class="record">
+      <div class="record-date">1 Ημέρα Πριν</div>
+      <div class="record-details">
+        <p><strong>Συμπτώματα:</strong> Συριγμός στην αναπνοή, Δύσπνοια</p>
+        <p><strong>Παράγοντες ενεργοποίησης:</strong> Καπνός</p>
+        <p><strong>Σημειώσεις:</strong> Χρειάστηκε να χρησιμοποιήσω τις εισπνοές δύο φορές σήμερα.</p>
+      </div>
+    </div>
+
+    <!-- Καταγραφή 3: 2 Ημέρες Πριν -->
+    <div class="record">
+      <div class="record-date">2 Ημέρες Πριν</div>
+      <div class="record-details">
+        <p><strong>Συμπτώματα:</strong> Σφιξίμο στο στήθος</p>
+        <p><strong>Παράγοντες ενεργοποίησης:</strong> Κρύος αέρας</p>
+        <p><strong>Σημειώσεις:</strong> Δύσπνοια μετά από άσκηση.</p>
+      </div>
+    </div>
+
+    <!-- Καταγραφή 4: 1 Εβδομάδα Πριν -->
+    <div class="record">
+      <div class="record-date">1 Εβδομάδα Πριν</div>
+      <div class="record-details">
+        <p><strong>Συμπτώματα:</strong> Σφυρίγματα στην αναπνοή, Βήχας</p>
+        <p><strong>Παράγοντες ενεργοποίησης:</strong> Σκόνη, Σκόνη γύρης</p>
+        <p><strong>Σημειώσεις:</strong> Κάποια δυσκολία στην αναπνοή τη νύχτα.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Παράδειγμα Γραφήματος Γραμμής -->
+  <div class="graph-container">
+    <h2>Συμπτώματα Της Εβδομάδας</h2>
+    <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Άξονας Χ (ημερομηνίες) -->
+      <line x1="50" y1="180" x2="350" y2="180" stroke="#333" stroke-width="2"/>
+      <text x="50" y="195" font-size="12" text-anchor="middle">1 Εβδομάδα Πριν</text>
+      <text x="125" y="195" font-size="12" text-anchor="middle">2 Ημέρες Πριν</text>
+      <text x="200" y="195" font-size="12" text-anchor="middle">1 Ημέρα Πριν</text>
+      <text x="275" y="195" font-size="12" text-anchor="middle">Σήμερα</text>
+
+      <!-- Άξονας Υ (ένταση) -->
+      <line x1="50" y1="20" x2="50" y2="180" stroke="#333" stroke-width="2"/>
+      <text x="40" y="20" font-size="12" text-anchor="middle">Σοβαρά</text>
+      <text x="40" y="100" font-size="12" text-anchor="middle">Μέτρια</text>
+      <text x="40" y="180" font-size="12" text-anchor="middle">Ήπια</text>
+
+      <!-- Γραμμή Διαδρομής (το γράφημα) -->
+      <path d="M 50 150 L 125 120 L 200 90 L 275 60" stroke="#F44336" stroke-width="2" fill="transparent"/>
+      
+      <!-- Σημεία Δεδομένων -->
+      <circle cx="50" cy="150" r="4" fill="#F44336"/>
+      <circle cx="125" cy="120" r="4" fill="#F44336"/>
+      <circle cx="200" cy="90" r="4" fill="#F44336"/>
+      <circle cx="275" cy="60" r="4" fill="#F44336"/>
+
+      <!-- Ετικέτες Δεδομένων -->
+      <text x="50" y="155" font-size="12" fill="#333" text-anchor="middle">Ήπια</text>
+      <text x="125" y="125" font-size="12" fill="#333" text-anchor="middle">Μέτρια</text>
+      <text x="200" y="95" font-size="12" fill="#333" text-anchor="middle">Σοβαρά</text>
+      <text x="275" y="65" font-size="12" fill="#333" text-anchor="middle">Σοβαρά</text>
+    </svg>
+  </div>
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air Quality Input</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="location.href='../index.html'" class="homeBtn">🏠</button>
+    <button id="infoBtn" aria-label="Show info">ℹ️</button>
+  </div>
+<div id="infoPopup" class="info-popup hidden" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+  <div class="info-content">
+    <button id="closeBtn" aria-label="Close info window" class="close-btn">×</button>
+    <h2 id="infoTitle">Πληροφορίες για το Ερωτηματολόγιο Παρακολούθησης Συμπτωμάτων</h2>
+    <pre>
+Το Ερωτηματολόγιο Παρακολούθησης Συμπτωμάτων σας βοηθάει να καταγράφετε και να παρακολουθείτε τα συμπτώματα που σχετίζονται με το άσθμα. Συμπληρώστε το για να καταγράψετε τα συμπτώματα που αντιμετωπίζετε και τον αντίκτυπο που έχουν στην καθημερινότητά σας.
+
+Απαντώντας στις ερωτήσεις, μπορείτε να παρακολουθείτε την πορεία της υγείας σας και να εντοπίσετε τα συμπτώματα που ενδέχεται να χρειάζονται περαιτέρω παρακολούθηση ή αντιμετώπιση.
+
+Η παρακολούθηση αυτών των συμπτωμάτων βοηθάει να βελτιώσετε την κατανόηση της κατάστασής σας και να προσαρμόσετε τη θεραπεία σας ανάλογα με τις ανάγκες σας.</pre>
+  </div>
+</div>
+  <main class="container">
+<div class="questionnaire-container">
+  <h2>Ερωτηματολόγιο Παρακολούθησης Συμπτωμάτων</h2>
+
+  <!-- Ερώτηση 1: Συμπτώματα -->
+  <div class="question">
+    <p>Αντιμετωπίζετε κάποιο από τα παρακάτω συμπτώματα;</p>
+    <label>
+      <input type="checkbox" id="wheezing"> Συριγμός αναπνοής
+    </label>
+    <label>
+      <input type="checkbox" id="coughing"> Βήχας
+    </label>
+    <label>
+      <input type="checkbox" id="shortness"> Δύσπνοια
+    </label>
+    <label>
+      <input type="checkbox" id="chest-tightness"> Σφιξίμο στο στήθος
+    </label>
+  </div>
+
+  <!-- Ερώτηση 2: Παράγοντες ενεργοποίησης -->
+  <div class="question">
+    <p>Ποιοι είναι πιθανοί παράγοντες που τα ενεργοποιούν;</p>
+    <label>
+      <input type="checkbox" id="dust"> Σκόνη
+    </label>
+    <label>
+      <input type="checkbox" id="pollen"> Σκόνη γύρης
+    </label>
+    <label>
+      <input type="checkbox" id="smoke"> Καπνός
+    </label>
+    <label>
+      <input type="checkbox" id="cold-air"> Κρύος αέρας
+    </label>
+  </div>
+
+  <!-- Ερώτηση 3: Άλλα Συμπτώματα (εισαγωγή κειμένου) -->
+  <div class="question">
+    <p>Άλλα συμπτώματα που έχετε παρατηρήσει:</p>
+    <input type="text" id="other-symptoms" placeholder="Καθορίστε άλλα συμπτώματα...">
+  </div>
+
+  <!-- Κουμπί υποβολής -->
+  <button id="submit">Υποβολή Ερωτηματολογίου</button>
+</div>
+
+<div class="show-records-container">
+  <button class="number" id="showRecordsBtn">Εμφάνιση Καταγραφών</button>
+</div>
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>

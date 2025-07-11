@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air Quality Input</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="location.href='../index.html'" class="homeBtn">🏠</button>
+    <button id="infoBtn" aria-label="Show info">ℹ️</button>
+        <button onclick="location.href='../settings/index.html'" class="homeBtn">⚙️</button>
+  </div>
+
+
+<div id="infoPopup" class="info-popup hidden" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+  <div class="info-content">
+    <button id="closeBtn" aria-label="Close info window" class="close-btn">×</button>
+    <h2 id="infoTitle">Πληροφορίες</h2>
+    <pre>Coming soon...</pre>
+  </div>
+</div>
+
+<main class="container">
+  <div class="coming-soon-content">
+    <h1>Σύντομα Διαθέσιμο</h1>
+    <p>Η εφαρμογή μας βρίσκεται σε εξέλιξη και σύντομα θα είναι έτοιμη για χρήση.</p>
+    <p>Μείνετε συντονισμένοι!</p>
+    <button class="notify-btn">Ειδοποιήστε με</button>
+  </div>
+</main>
+
+  <script src="updates.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

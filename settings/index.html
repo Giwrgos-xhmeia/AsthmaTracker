@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air Quality Input</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="location.href='../index.html'" class="homeBtn">🏠</button>
+    <button id="infoBtn" aria-label="Show info">ℹ️</button>
+        <button onclick="location.href='../settings/index.html'" class="homeBtn">⚙️</button>
+  </div>
+<div id="infoPopup" class="info-popup hidden" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+  <div class="info-content">
+    <button id="closeBtn" aria-label="Close info window" class="close-btn">×</button>
+    <h2 id="infoTitle">Ρυθμίσεις Εφαρμογής</h2>
+    <pre>
+Αυτή η σελίδα σας επιτρέπει να προσαρμόσετε την εφαρμογή σύμφωνα με τις ανάγκες σας. Μπορείτε να ενεργοποιήσετε τη σκοτεινή λειτουργία, να ρυθμίσετε τις ειδοποιήσεις, να επιλέξετε τη γλώσσα της εφαρμογής και να συγχρονίσετε τα δεδομένα σας.
+Επίσης, έχετε τη δυνατότητα να επαναφέρετε τις ρυθμίσεις στις εργοστασιακές προεπιλογές αν το επιθυμείτε.</pre>
+  </div>
+</div>
+<main class="container">
+  <div class="settings-container">
+    <h2>Ρυθμίσεις</h2>
+
+    <!-- Dark Mode / Light Mode Toggle -->
+    <div class="setting-item">
+      <div class="setting-label">Θέμα</div>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="setting-description">Ενεργοποίηση σκοτεινής λειτουργίας</span>
+    </div>
+
+    <!-- Notifications Toggle -->
+    <div class="setting-item">
+      <div class="setting-label">Ειδοποιήσεις</div>
+      <label class="switch">
+        <input type="checkbox" id="notificationToggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="setting-description">Λάβετε ειδοποιήσεις για συμπτώματα</span>
+    </div>
+
+    <!-- Language Selection -->
+    <div class="setting-item">
+      <div class="setting-label">Γλώσσα</div>
+      <select id="languageSelect">
+        <option value="greek">Ελληνικά</option>
+        <option value="english">English</option>
+        <option value="spanish">Español</option>
+      </select>
+      <span class="setting-description">Επιλέξτε γλώσσα για την εφαρμογή</span>
+    </div>
+
+    <!-- Sync Option -->
+    <div class="setting-item">
+      <div class="setting-label">Συγχρονισμός</div>
+      <label class="switch">
+        <input type="checkbox" id="syncToggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="setting-description">Αυτόματη συγχρονισμός δεδομένων</span>
+    </div>
+
+    <!-- Reset Settings Button -->
+    <div class="setting-item">
+      <div class="setting-label">Επαναφορά Ρυθμίσεων</div>
+      <button class="reset-btn">Επαναφορά</button>
+      <span class="setting-description">Επαναφέρετε τις ρυθμίσεις στις εργοστασιακές προεπιλογές</span>
+    </div>
+
+    <!-- Save / Cancel Buttons -->
+    <div class="setting-buttons">
+      <button id="saveSettings" class="button">Αποθήκευση</button>
+      <button id="cancelSettings" class="button cancel">Ακύρωση</button>
+    </div>
+  </div>
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

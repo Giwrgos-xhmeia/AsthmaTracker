@@ -7,6 +7,10 @@ document.querySelector('.quality').addEventListener('click', () => {
 document.querySelector('.symptoms').addEventListener('click', () => {
   window.location.href = './symptoms/index.html';
 });
+document.querySelector('.aiassis').addEventListener('click', () => {
+  window.location.href = './coop/index.html';
+});
+
 
 function httpGet(theUrl)
 {

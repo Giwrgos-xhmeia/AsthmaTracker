@@ -21,7 +21,10 @@ console.log(hours);
   no2 = data.hourly.nitrogen_dioxide[hours];
     return Pm25;
 }
-document.getElementById('submitBtn').addEventListener('click', refresh());
+document.getElementById('submitBtn').addEventListener('click', () => {
+  console.log('Button clicked!');
+  refresh();
+});
 function refresh() {
   console.log(httpGet("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=52.52&longitude=13.41&hourly=pm10,pm2_5,ozone,nitrogen_dioxide&timezone=auto&forecast_days=1"));
 	document.querySelector('.number1').textContent = Pm25;

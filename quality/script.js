@@ -33,6 +33,7 @@ function refresh() {
   document.querySelector('.number4').textContent = no2;
 
 };
+refresh();
 //pm25 updater
 function updatePM25Color() {
   const div = document.querySelector('.number1');

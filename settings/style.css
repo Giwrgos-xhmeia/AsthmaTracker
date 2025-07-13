@@ -263,7 +263,6 @@ select {
 /* Cancel Button */
 .cancel {
   background-color: #d9534f;
-  margin-left: 1rem;
 }
 
 .cancel:hover {
